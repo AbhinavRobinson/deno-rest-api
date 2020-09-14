@@ -27,40 +27,47 @@ export const getflight = async flightId => {
     });
   });
 
-  return obj;
+  return obj; 
 };
 
 export const createflight = async flightData => {
   const newflight = {
-    name: String(flightData.name),
-    brand: String(flightData.brand),
-    is_premium: "is_premium" in flightData ? Boolean(flightData.is_premium) : false,
-    registration_date: new Date()
+    FlightNo: String(flightData.FlightNo),
+    Airlines: String(flightData.Airlines),
+    OnTime: "OnTime" in flightData ? Boolean(flightData.OnTime) : false,
+    Time: new Date(),
+    Dep: String(flightData.Dep),
+    Arr: String(flightData.Arr)
   };
 
   await FlightRepo.create(newflight);
 
-  return newflight.id;
+  return newflight.FlightNo;
 };
 
-export const updateflight = async (flightId, flightData) => {
-  const flight = await getflight(flightId);
+/**
+ * ! REQUIRE MANUAL EDITING. 
+ *  TODO: Find a way to Update list w/o explicitly stating. (#02)
+ */
 
-  if (Object.keys(flight).length === 0 && flight.constructor === Object) {
-    throw new Error("flight not found");
-  }
+// export const updateflight = async (flightId, flightData) => {
+//   const flight = await getflight(flightId);
 
-  const updatedflight = {
-    name: flightData.name !== undefined ? String(flightData.name) : flight.name,
-    brand: flightData.brand !== undefined ? String(flightData.brand) : flight.brand,
-    is_premium:
-      flightData.is_premium !== undefined
-        ? Boolean(flightData.is_premium)
-        : flight.is_premium
-  };
+//   if (Object.keys(flight).length === 0 && flight.constructor === Object) {
+//     throw new Error("flight not found");
+//   }
 
-  FlightRepo.update(flightId, updatedflight);
-};
+//   const updatedflight = {
+//     name: flightData.name !== undefined ? String(flightData.name) : flight.name,
+//     brand: flightData.brand !== undefined ? String(flightData.brand) : flight.brand,
+//     is_premium:
+//       flightData.is_premium !== undefined
+//         ? Boolean(flightData.is_premium)
+//         : flight.is_premium
+//   };
+
+//   FlightRepo.update(flightId, updatedflight);
+// };
 
 export const deleteflight = async flightId => {
   FlightRepo.delete(flightId);
