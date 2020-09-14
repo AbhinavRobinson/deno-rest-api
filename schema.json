@@ -4,7 +4,7 @@
         "Airlines": "STRING 50",
         "Time": "DATETIME",
         "OnTime": "BOOLEAN",
-        "Departure": "STRING 4",
-        "Arrival": "STRING 4"
+        "Dep": "STRING 4",
+        "Arr": "STRING 4"
     }
 }

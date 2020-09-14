@@ -8,8 +8,7 @@ import { Client } from "https://deno.land/x/postgres/mod.ts";
  * ? About
  * * import postgres server config
  */
-const cfg = require('./config.json').db
-
+const cfg = JSON.parse(Deno.readTextFileSync('./config.json')).db;
 /**
  * ! Connection Constructor Class
  */
