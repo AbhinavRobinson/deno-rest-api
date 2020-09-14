@@ -1,0 +1,9 @@
+{
+    "db" : {
+        "user"     : "deno",
+        "database" : "restapi_deno",
+        "hostname" : "localhost",
+        "password" : "denothedino",
+        "port"     : 5432
+    }
+}
