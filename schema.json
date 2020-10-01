@@ -1,10 +1,10 @@
 {
-    "Flights" : {
-        "FlightNo": "INT PRIMARY KEY",
-        "Airlines": "STRING 50",
-        "Time": "DATETIME",
-        "OnTime": "BOOLEAN",
-        "Dep": "STRING 4",
-        "Arr": "STRING 4"
-    }
+	"Flights": {
+		"FlightNo": "INT PRIMARY KEY",
+		"Airlines": "STRING 50",
+		"Time": "DATETIME",
+		"OnTime": "BOOLEAN",
+		"Dep": "STRING 4",
+		"Arr": "STRING 4"
+	}
 }
