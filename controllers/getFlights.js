@@ -1,5 +1,5 @@
-import { getFlights } from "../services/flightService.js";
+import { getFlights } from '../services/flightService.js'
 
 export default async ({ response }) => {
-  response.body = await getFlights();
-};
+	response.body = await getFlights()
+}
