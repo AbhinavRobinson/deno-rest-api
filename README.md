@@ -9,4 +9,21 @@ Boilerplate for Deno based RestAPI
 ## Requirements
 
 - `Deno >1.0.0`
-- `Postgres DB`
+- `PostgreSQL`
+
+## Runing the Code
+
+The code still needs some work, and isn't feature complete.
+If you want to try it (but I won't advice to), run `deno run --allow-net --allow-env index.js` command.
+
+## Why Not Runnable
+
+This is meant to be a boilerplate of functions from which you can easily reuse code. This was not meant to be run as a whole.
+(also it was sort of coding practice)
+
+## TODO
+
+01: Reformating the Update Function in flightRepo.js
+02: Reformating the Update Function in flightService.js
+
+Additional Todos: Reformating Controllers for the former functions. You can pull, update and merge :):):):):):):)
